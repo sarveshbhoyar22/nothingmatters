@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nothingmatter. — Nothing matters. Go outside. | Gurgaon Outdoor Community</title>
+  <meta name="description" content="A modern outdoor lifestyle community for young adults in Gurgaon. Weekend hikes, wild explorations, long bike rides, stupid games and good people.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23123D32' rx='6'/%3E%3Cpath d='M8 22L16 10L24 22H8Z' fill='%23F3C94F'/%3E%3Ccircle cx='23' cy='9' r='3' fill='%23C24D2C'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+
+  <!-- Film Grain Tactile Overlay -->
+  <div class="film-grain-overlay" aria-hidden="true"></div>
+
+  <!-- Floating Quick Access WhatsApp Pill -->
+  <a href="#community" class="floating-whatsapp-pill btn-community-trigger">
+    <span class="green-pulse"></span>
+    <span>Join WhatsApp Broadcast</span>
+  </a>
+
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <aside class="announcement-bar">
+    <div class="ticker-wrap">
+      <span class="ticker-dot"></span>
+      <span>NEXT DROP: MISSION 001 · KHOJ TRAIL DAY</span>
+      <span>·</span>
+      <span>SUNDAY 5:30 AM · VATIKA CHOWK, GURGAON</span>
+      <span>·</span>
+      <span style="color: var(--c-mustard);">ONLY 6 SPOTS LEFT</span>
+      <span>·</span>
+      <a href="#missions" style="color: var(--bg-ivory); text-decoration: underline; font-weight: bold;">RESERVE SPOT →</a>
+    </div>
+  </aside>
+
+  <!-- STICKY NAVIGATION -->
+  <header class="site-header">
+    <div class="page-container nav-wrapper">
+      <a href="#" class="brand-link">
+        <span class="brand-logo">nothingmatter<span class="dot">.</span></span>
+        <span class="brand-sub">GURGAON OUTDOOR COLLECTIVE</span>
+      </a>
+
+      <!-- Desktop Links -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#philosophy" class="nav-link">01 Manifesto</a></li>
+          <li><a href="#categories" class="nav-link">02 Categories</a></li>
+          <li><a href="#missions" class="nav-link">03 Next Missions</a></li>
+          <li><a href="#featured-khoj" class="nav-link">04 Khoj Experience</a></li>
+          <li><a href="#community" class="nav-link">05 Community</a></li>
+          <li><a href="#rules" class="nav-link">06 Field Rules</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <!-- Trail Soundscape Button - Little, Sleek & Minimal -->
+        <button id="soundscapeToggle" class="soundscape-toggle" title="Toggle Aravalli Trail Atmosphere Audio">
+          <span class="sound-wave">
+            <span></span><span></span><span></span>
+          </span>
+          <span id="soundscapeText">AUDIO: OFF</span>
+        </button>
+
+        <a href="#missions" class="btn-editorial btn-editorial-primary" style="padding: 0.55rem 1.15rem; font-size: 1.05rem; display: none; @media(min-width: 640px){display:inline-flex;}">
+          EXPLORE MISSIONS
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Open mobile menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE DRAWER -->
+  <div id="mobileDrawer" class="mobile-drawer">
+    <div style="margin-bottom: 2rem;">
+      <span class="brand-logo" style="font-size: 2.8rem;">nothingmatter<span class="dot">.</span></span>
+      <p class="font-hand" style="font-size: 1.7rem; color: var(--c-terracotta);">"Nothing matters. Go outside."</p>
+    </div>
+
+    <ul class="mobile-nav-links">
+      <li><a href="#philosophy" class="mobile-nav-link"><span>Manifesto</span> <span class="num">01</span></a></li>
+      <li><a href="#categories" class="mobile-nav-link"><span>Categories</span> <span class="num">02</span></a></li>
+      <li><a href="#missions" class="mobile-nav-link"><span>Next Missions</span> <span class="num">03</span></a></li>
+      <li><a href="#featured-khoj" class="mobile-nav-link"><span>KHOJ Trail Day</span> <span class="num">04</span></a></li>
+      <li><a href="#community" class="mobile-nav-link"><span>Community</span> <span class="num">05</span></a></li>
+      <li><a href="#rules" class="mobile-nav-link"><span>Field Rules</span> <span class="num">06</span></a></li>
+    </ul>
+
+    <div style="margin-top: auto; display: flex; flex-direction: column; gap: 1rem;">
+      <a href="#missions" class="btn-editorial btn-editorial-primary mobile-nav-link" style="justify-content: center; font-size: 1.4rem;">
+        VIEW UPCOMING MISSIONS
+      </a>
+      <p class="font-mono" style="font-size: 0.72rem; color: var(--c-muted-olive); text-align: center;">
+        GURGAON · WEEKENDS · GOOD PEOPLE
+      </p>
+    </div>
+  </div>
+
+  <main>
+    <!-- =======================================================================
+         1. FULL-SCREEN HERO SECTION
+         ======================================================================= -->
+    <section class="hero-section" id="hero">
+      <div class="hero-background-wrapper">
+        <img id="heroBgImg" class="hero-bg-img" src="assets/images/khoj_winding_road.jpg" alt="Aravalli trail ridge overlooking winding road in Gurgaon">
+        <div class="hero-overlay"></div>
+      </div>
+
+      <!-- Interactive Photo Switcher (Documentary moments) -->
+      <div class="hero-photo-switcher">
+        <span class="switcher-label">Field Notes Archives:</span>
+        <div class="switcher-buttons">
+          <button class="switcher-btn active" data-index="0" title="Aravalli Ridge View">01 RIDGE</button>
+          <button class="switcher-btn" data-index="1" title="Frisbee Match">02 RECESS</button>
+          <button class="switcher-btn" data-index="2" title="Sunrise Ride">03 RIDE</button>
+          <button class="switcher-btn" data-index="3" title="Kulhad Chai">04 CHAI</button>
+        </div>
+      </div>
+
+      <div class="page-container hero-content">
+        <!-- Weather / Condition Pills -->
+        <div class="hero-badge-row">
+          <span class="hero-pill">
+            <span style="color: var(--c-mustard);">✦</span> GURGAON WEEKENDS
+          </span>
+          <span class="hero-pill">
+            <span style="color: #25D366;">●</span> SUNRISE 05:48 AM
+          </span>
+          <span class="hero-pill">
+            <span style="color: var(--c-mustard);">☕</span> 100% SCREEN-FREE
+          </span>
+          <span id="heroPhotoTag" class="hero-pill" style="border-color: var(--c-mustard); color: var(--c-mustard);">
+            ARAVALLI RIDGE OVERLOOK · 06:40 AM
+          </span>
+        </div>
+
+        <div class="hero-brand-name">
+          nothingmatter<span class="dot">.</span>
+        </div>
+
+        <h1 class="hero-tagline">
+          Nothing matters. <span class="hand-drawn-underline">Go outside.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Weekend hikes, wild explorations, long rides, stupid games and good people.
+        </p>
+
+        <!-- CTAs & Handwritten Annotation -->
+        <div class="hero-actions-group">
+          <a href="#missions" class="btn-editorial btn-editorial-primary">
+            EXPLORE NEXT MISSION
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          </a>
+
+          <button class="btn-editorial btn-editorial-secondary btn-community-trigger" style="color: var(--bg-ivory); border-color: rgba(243,238,223,0.7);">
+            JOIN THE COMMUNITY
+          </button>
+        </div>
+
+        <!-- Handwritten Annotation with Curved Hand-Drawn Arrow -->
+        <div class="hero-handwritten-note">
+          <svg class="hand-arrow-animated" width="42" height="32" viewBox="0 0 42 32" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 28 C 14 18, 24 10, 36 6 M 26 5 L 37 6 L 35 15" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Gurgaon · Weekends · Good people</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         2. INTRODUCTION SECTION ("WE DON'T DO TOURS.")
+         ======================================================================= -->
+    <section class="intro-section" id="philosophy">
+      <div class="page-container intro-grid">
+        <!-- Left Editorial Copy -->
+        <div>
+          <span class="intro-badge">PHILOSOPHY / FIELD MANIFESTO</span>
+          <h2 class="intro-headline">WE DON'T DO TOURS.</h2>
+
+          <div class="intro-body-list">
+            <p class="intro-lead">We create little reasons to leave the house.</p>
+            
+            <div class="intro-trail-item">
+              <span class="bullet">→</span>
+              <span>A sunrise hike.</span>
+            </div>
+            <div class="intro-trail-item">
+              <span class="bullet">→</span>
+              <span>A random trail.</span>
+            </div>
+            <div class="intro-trail-item">
+              <span class="bullet">→</span>
+              <span>A long bike ride.</span>
+            </div>
+            <div class="intro-trail-item">
+              <span class="bullet">→</span>
+              <span>Frisbee with strangers who aren't strangers anymore.</span>
+            </div>
+            <div class="intro-trail-item">
+              <span class="bullet">→</span>
+              <span>A hidden lake.</span>
+            </div>
+            <div class="intro-trail-item">
+              <span class="bullet">→</span>
+              <span>A ridiculous adventure that wasn't on the plan.</span>
+            </div>
+          </div>
+
+          <p style="font-size: 1.15rem; color: var(--c-dark-olive); margin-bottom: 0.5rem;">
+            Sometimes it's peaceful.<br>
+            Sometimes it's chaotic.<br>
+            Sometimes it's both.
+          </p>
+
+          <div class="intro-punchline-box">
+            <p class="intro-punchline">
+              "The activity is secondary. The experience is the point."
+            </p>
+          </div>
+        </div>
+
+        <!-- Right Side: Authentic Polaroid & Journal Element -->
+        <div class="journal-scrap-container">
+          <div class="washi-tape"></div>
+
+          <div class="polaroid-card tilted-left">
+            <div class="polaroid-img-wrapper">
+              <img class="polaroid-img" src="assets/images/khoj_winding_road.jpg" alt="Sitting on the rocky outcrop overlooking Leopard Trail with roasted chana">
+            </div>
+            <p class="polaroid-caption">
+              "Sitting on the ridge above Leopard Trail with roasted chana & morning silence. 6:40 AM."
+            </p>
+          </div>
+
+          <!-- Rubber Field Stamp -->
+          <div class="field-stamp">
+            <span class="stamp-text-sm">GURGAON</span>
+            <span class="stamp-text-lg">ZERO</span>
+            <span class="stamp-text-lg">SNOBBERY</span>
+            <span class="stamp-text-sm">EST. 2024</span>
+          </div>
+
+          <div style="margin-top: 2rem; display: flex; align-items: center; gap: 0.75rem;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--c-terracotta)" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            <span class="font-hand" style="font-size: 1.45rem; color: var(--c-dark-olive);">
+              "Come for the trail. Stay for the people."
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         3. ACTIVITY CATEGORIES (4 LARGE EDITORIAL CARDS)
+         ======================================================================= -->
+    <section class="categories-section" id="categories">
+      <div class="page-container">
+        <div class="section-header-editorial">
+          <span class="section-tag">WHAT WE GET UP TO</span>
+          <h2 class="display-title">FOUR FLAVORS OF WEEKEND FREEDOM.</h2>
+          <p style="font-size: 1.15rem; color: var(--c-ink-muted); max-width: 620px;">
+            Not a checklist. Not a marathon training camp. Just different ways to step off the concrete and reset your mind.
+          </p>
+        </div>
+
+        <div class="category-grid">
+          <!-- CARD 1: KHOJ -->
+          <article class="category-card">
+            <div class="category-image-wrap">
+              <img src="assets/images/aravalli_trail_hike.jpg" alt="Hikers scrambling up rocky trail in Aravalli hills">
+              <span class="category-badge-chip">CATEGORY 01</span>
+            </div>
+            <div class="category-card-body">
+              <h3 class="category-title">KHOJ</h3>
+              <p class="category-tagline">"Find something you've never seen."</p>
+              <p class="category-desc">
+                Morning hikes, trails, jungle exploration, viewpoints and hidden places. Stepping into the ancient Aravalli scrub while Gurgaon is still asleep.
+              </p>
+              <div class="category-stats-list">
+                <div class="category-stat-row">
+                  <span>TERRAIN</span>
+                  <span class="val">Scrub, Rocks & Red Sand</span>
+                </div>
+                <div class="category-stat-row">
+                  <span>AVG DURATION</span>
+                  <span class="val">2.5 – 3.5 Hours</span>
+                </div>
+                <div class="category-stat-row">
+                  <span>CHAI FACTOR</span>
+                  <span class="val">100% Guaranteed</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 2: RIDE -->
+          <article class="category-card">
+            <div class="category-image-wrap">
+              <img src="assets/images/cycling_dawn.jpg" alt="Friends riding bicycles along sunrise road">
+              <span class="category-badge-chip">CATEGORY 02</span>
+            </div>
+            <div class="category-card-body">
+              <h3 class="category-title">RIDE</h3>
+              <p class="category-tagline">"Take the long way home."</p>
+              <p class="category-desc">
+                Long bike rides, countryside roads and sunrise rides. Gravel tracks, quiet mustard field borders and crispy dhaba parathas at the halfway mark.
+              </p>
+              <div class="category-stats-list">
+                <div class="category-stat-row">
+                  <span>PACE</span>
+                  <span class="val">Chill / Social Cadence</span>
+                </div>
+                <div class="category-stat-row">
+                  <span>DISTANCE</span>
+                  <span class="val">28 – 45 KM</span>
+                </div>
+                <div class="category-stat-row">
+                  <span>BIKE TYPE</span>
+                  <span class="val">Hybrid / Gravel / MTB</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 3: PLAY -->
+          <article class="category-card">
+            <div class="category-image-wrap">
+              <img src="assets/images/morning_frisbee.jpg" alt="Group of young adults laughing playing frisbee in grass meadow">
+              <span class="category-badge-chip">CATEGORY 03</span>
+            </div>
+            <div class="category-card-body">
+              <h3 class="category-title">PLAY</h3>
+              <p class="category-tagline">"Adults need recess too."</p>
+              <p class="category-desc">
+                Frisbee, games, sports and completely unnecessary competitions. Running barefoot in grass, diving for discs, and laughing until your ribs hurt.
+              </p>
+              <div class="category-stats-list">
+                <div class="category-stat-row">
+                  <span>COMPETITIVENESS</span>
+                  <span class="val">0% Serious / 100% Fun</span>
+                </div>
+                <div class="category-stat-row">
+                  <span>RULES</span>
+                  <span class="val">Explained in 60 Seconds</span>
+                </div>
+                <div class="category-stat-row">
+                  <span>ENERGY</span>
+                  <span class="val">Pure Childhood Recess</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 4: ADVENTURE -->
+          <article class="category-card">
+            <div class="category-image-wrap">
+              <img src="assets/images/lake_sunset_meditation.jpg" alt="Reflective lake water with temple in distance">
+              <span class="category-badge-chip">CATEGORY 04</span>
+            </div>
+            <div class="category-card-body">
+              <h3 class="category-title">ADVENTURE</h3>
+              <p class="category-tagline">"Sometimes we don't know what's next."</p>
+              <p class="category-desc">
+                Spontaneous exploration and unexpected weekend missions. Secret quarry lakes, night hikes under stars, rain walks, and trails not on Google Maps.
+              </p>
+              <div class="category-stats-list">
+                <div class="category-stat-row">
+                  <span>SURPRISE FACTOR</span>
+                  <span class="val">Very High</span>
+                </div>
+                <div class="category-stat-row">
+                  <span>MAP DETAIL</span>
+                  <span class="val">Rough Sketch Only</span>
+                </div>
+                <div class="category-stat-row">
+                  <span>MEMORABILITY</span>
+                  <span class="val">Unmatched</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         4. NEXT MISSIONS (COLLECTIBLE MISSION CARDS)
+         ======================================================================= -->
+    <section class="missions-section" id="missions">
+      <div class="page-container">
+        <div class="section-header-editorial" style="display: flex; justify-content: space-between; align-items: flex-start; flex-direction: row; flex-wrap: wrap;">
+          <div>
+            <span class="section-tag">UPCOMING GATHERINGS</span>
+            <h2 class="display-title">NEXT MISSIONS.</h2>
+            <p style="font-size: 1.15rem; color: var(--c-ink-muted);">
+              Small groups. Limited slots. Claim your ticket before it disappears.
+            </p>
+          </div>
+
+          <!-- Category Filter Bar -->
+          <div class="mission-filter-bar">
+            <button class="filter-pill active" data-filter="all">ALL MISSIONS</button>
+            <button class="filter-pill" data-filter="khoj">KHOJ</button>
+            <button class="filter-pill" data-filter="ride">RIDE</button>
+            <button class="filter-pill" data-filter="play">PLAY</button>
+            <button class="filter-pill" data-filter="adventure">ADVENTURE</button>
+          </div>
+        </div>
+
+        <div class="missions-grid">
+          <!-- MISSION 001: KHOJ TRAIL DAY (FEATURED) -->
+          <div class="mission-card" data-category="khoj">
+            <div class="mission-card-header">
+              <span class="mission-code">MISSION 001</span>
+              <span class="mission-cat-pill">KHOJ</span>
+            </div>
+            <div class="mission-thumbnail-wrap">
+              <img class="mission-thumbnail" src="assets/images/khoj_winding_road.jpg" alt="Khoj Trail Day in Aravallis">
+            </div>
+            <div class="mission-card-body">
+              <h4 class="mission-card-title">KHOJ: TRAIL DAY</h4>
+              <div class="mission-meta-info">
+                <div class="mission-meta-item">
+                  <span>📅</span> <strong>Sunday · 5:30 AM</strong>
+                </div>
+                <div class="mission-meta-item">
+                  <span>📍</span> <span>Vatika Chowk, Gurgaon</span>
+                </div>
+                <div class="mission-meta-item" style="color: var(--c-terracotta);">
+                  <span>⚡</span> <strong>6 SPOTS REMAINING</strong>
+                </div>
+              </div>
+              <div class="mission-perks-row">
+                <span class="perk-tag">🥾 Hike</span>
+                <span class="perk-tag">🌿 Explore</span>
+                <span class="perk-tag">🥏 Frisbee</span>
+                <span class="perk-tag">🧘 Meditation</span>
+              </div>
+              <div class="mission-footer-action">
+                <button class="btn-view-mission" data-mission-id="001">
+                  VIEW MISSION →
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- MISSION 002: SUNRISE GRAVEL -->
+          <div class="mission-card" data-category="ride">
+            <div class="mission-card-header">
+              <span class="mission-code">MISSION 002</span>
+              <span class="mission-cat-pill">RIDE</span>
+            </div>
+            <div class="mission-thumbnail-wrap">
+              <img class="mission-thumbnail" src="assets/images/cycling_dawn.jpg" alt="Sunrise gravel bike ride">
+            </div>
+            <div class="mission-card-body">
+              <h4 class="mission-card-title">SUNRISE GRAVEL & DHABA</h4>
+              <div class="mission-meta-info">
+                <div class="mission-meta-item">
+                  <span>📅</span> <strong>Saturday · 5:15 AM</strong>
+                </div>
+                <div class="mission-meta-item">
+                  <span>📍</span> <span>Leopard Trail to Silani</span>
+                </div>
+                <div class="mission-meta-item" style="color: var(--c-terracotta);">
+                  <span>⚡</span> <strong>8 SPOTS REMAINING</strong>
+                </div>
+              </div>
+              <div class="mission-perks-row">
+                <span class="perk-tag">🚴 38km Ride</span>
+                <span class="perk-tag">🌾 Farmlands</span>
+                <span class="perk-tag">☕ Dhaba Chai</span>
+                <span class="perk-tag">🫓 Hot Parathas</span>
+              </div>
+              <div class="mission-footer-action">
+                <button class="btn-view-mission" data-mission-id="002">
+                  VIEW MISSION →
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- MISSION 003: RECESS IN THE RIDGE -->
+          <div class="mission-card" data-category="play">
+            <div class="mission-card-header">
+              <span class="mission-code">MISSION 003</span>
+              <span class="mission-cat-pill">PLAY</span>
+            </div>
+            <div class="mission-thumbnail-wrap">
+              <img class="mission-thumbnail" src="assets/images/morning_frisbee.jpg" alt="Recess in Northern Ridge">
+            </div>
+            <div class="mission-card-body">
+              <h4 class="mission-card-title">RECESS IN THE RIDGE</h4>
+              <div class="mission-meta-info">
+                <div class="mission-meta-item">
+                  <span>📅</span> <strong>Sunday · 4:00 PM</strong>
+                </div>
+                <div class="mission-meta-item">
+                  <span>📍</span> <span>Northern Ridge, Flagstaff</span>
+                </div>
+                <div class="mission-meta-item" style="color: var(--c-forest);">
+                  <span>⚡</span> <strong>FREE COMMUNITY DROP</strong>
+                </div>
+              </div>
+              <div class="mission-perks-row">
+                <span class="perk-tag">🥏 Frisbee Cup</span>
+                <span class="perk-tag">🚩 Capture Flag</span>
+                <span class="perk-tag">🌅 Sunset Stroll</span>
+                <span class="perk-tag">🍋 Shikanji</span>
+              </div>
+              <div class="mission-footer-action">
+                <button class="btn-view-mission" data-mission-id="003">
+                  VIEW MISSION →
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- MISSION 004: THE CRATER LAKE EXPEDITION -->
+          <div class="mission-card" data-category="adventure">
+            <div class="mission-card-header">
+              <span class="mission-code">MISSION 004</span>
+              <span class="mission-cat-pill">ADVENTURE</span>
+            </div>
+            <div class="mission-thumbnail-wrap">
+              <img class="mission-thumbnail" src="assets/images/lake_sunset_meditation.jpg" alt="Secret crater lake in Asola buffer zone">
+            </div>
+            <div class="mission-card-body">
+              <h4 class="mission-card-title">CRATER LAKE EXPEDITION</h4>
+              <div class="mission-meta-info">
+                <div class="mission-meta-item">
+                  <span>📅</span> <strong>Next Sunday · 5:45 AM</strong>
+                </div>
+                <div class="mission-meta-item">
+                  <span>📍</span> <span>Asola Buffer Zone Secret Quarry</span>
+                </div>
+                <div class="mission-meta-item" style="color: var(--c-terracotta);">
+                  <span>⚡</span> <strong>ONLY 4 SPOTS LEFT</strong>
+                </div>
+              </div>
+              <div class="mission-perks-row">
+                <span class="perk-tag">🧗 Scramble</span>
+                <span class="perk-tag">🌊 Secret Lake</span>
+                <span class="perk-tag">📵 Zero Signal</span>
+                <span class="perk-tag">📓 Field Journal</span>
+              </div>
+              <div class="mission-footer-action">
+                <button class="btn-view-mission" data-mission-id="004">
+                  VIEW MISSION →
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         5. FEATURED KHOJ EXPERIENCE (INSPIRED BY KHOJ POSTER REFERENCE)
+         ======================================================================= -->
+    <section class="featured-khoj-section" id="featured-khoj">
+      <div class="khoj-bg-texture"></div>
+
+      <div class="page-container khoj-hero-container">
+        <!-- Left Column: Poster Title, Description & Vertical Timeline -->
+        <div>
+          <span class="khoj-header-badge">VISUAL REFERENCE · POSTER ARCHIVE</span>
+          
+          <h2 class="khoj-title">
+            KHOJ
+            <span class="khoj-sub">— TRAIL DAY</span>
+          </h2>
+
+          <p class="khoj-intro-copy">
+            <strong>Not your ordinary jungle walk.</strong><br>
+            We'll hit the trail, explore around, snack, play some frisbee and slow down for a bit.
+          </p>
+
+          <p class="khoj-callout-quote">
+            "Plans are overrated. Weekends aren't."
+          </p>
+
+          <!-- Visual Vertical Timeline with Hand-Drawn / Custom Icons -->
+          <div class="timeline-module">
+            <div class="timeline-title">
+              <span>EXPEDITION TIMELINE</span>
+              <span class="loc">VATIKA CHOWK · 28.4089° N</span>
+            </div>
+
+            <div class="timeline-track">
+              <!-- STEP 1 -->
+              <div class="timeline-item">
+                <div class="timeline-node">01</div>
+                <div class="timeline-content">
+                  <div class="timeline-time">5:30 AM</div>
+                  <div class="timeline-label">MEET AT VATIKA CHOWK</div>
+                  <div class="timeline-desc">Gathering point, car-pooling, distributing water rations & sleepy morning smiles.</div>
+                </div>
+              </div>
+
+              <!-- STEP 2 -->
+              <div class="timeline-item">
+                <div class="timeline-node">02</div>
+                <div class="timeline-content">
+                  <div class="timeline-time">6:00 AM</div>
+                  <div class="timeline-label">BRIEFING + KHOJ STARTS</div>
+                  <div class="timeline-desc">Leaving the road behind. Stepping onto ancient Aravalli rock and scrub trail as twilight breaks.</div>
+                </div>
+              </div>
+
+              <!-- STEP 3 -->
+              <div class="timeline-item">
+                <div class="timeline-node">03</div>
+                <div class="timeline-content">
+                  <div class="timeline-time">6:15 – 8:00 AM</div>
+                  <div class="timeline-label">KHOJ + FRISBEE</div>
+                  <div class="timeline-desc">Discovering ridges, hidden viewpoints, scrambling up sandstone, followed by an impromptu frisbee showdown on the meadow plateau.</div>
+                </div>
+              </div>
+
+              <!-- STEP 4 -->
+              <div class="timeline-item">
+                <div class="timeline-node">04</div>
+                <div class="timeline-content">
+                  <div class="timeline-time">8:00 – 8:20 AM</div>
+                  <div class="timeline-label">MEDITATION + SNACKS</div>
+                  <div class="timeline-desc">Perched on warm morning boulders. 10 minutes of guided stillness, followed by roasted chana, fresh fruit, and crisp laughter.</div>
+                </div>
+              </div>
+
+              <!-- STEP 5 -->
+              <div class="timeline-item">
+                <div class="timeline-node">05</div>
+                <div class="timeline-content">
+                  <div class="timeline-time">8:30 AM</div>
+                  <div class="timeline-label">SAYONARA</div>
+                  <div class="timeline-desc">Dirty sneakers, elevated dopamine, new friends in your phone. Optional kulhad chai circle before heading back into the city.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Schedule Flexibility & WhatsApp Connect Notice -->
+            <div class="timeline-update-notice">
+              <div class="notice-icon">⚠️</div>
+              <div class="notice-content">
+                <div class="notice-title">SCHEDULE CAN CHANGE WITH DAYS & SEASONS</div>
+                <p class="notice-desc">
+                  Trail timings shift slightly based on sunrise, weather & morning humidity. For live pin drops, carpooling, gear tips and last-minute schedule updates, connect on our WhatsApp group.
+                </p>
+                <button type="button" class="notice-link btn-community-trigger">
+                  <span>💬 Join WhatsApp Group for Latest Updates →</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Field Dossier, Snack Feature & Interactive Checklist -->
+        <div class="khoj-dossier-card">
+          <div class="dossier-tape"></div>
+
+          <div class="dossier-header-bar">
+            <span class="dossier-title">FIELD DOSSIER</span>
+            <span class="dossier-coords">GPS: 28.4089° N, 77.0620° E</span>
+          </div>
+
+          <!-- Candid Photo Spotlight from User Uploads -->
+          <div class="dossier-photo-spotlight">
+            <img src="assets/images/khoj_winding_road.jpg" alt="Candid view of trail overlook with roasted chana">
+            <span class="dossier-photo-tag">FIELD CAM #01 · VATIKA RIDGE</span>
+          </div>
+
+          <!-- Snack Situation Feature Box -->
+          <div class="snack-feature-box">
+            <div class="snack-icon">🥜</div>
+            <div>
+              <div class="snack-title">THE SNACK SITUATION</div>
+              <p class="snack-desc">
+                Yes, that’s roasted chana in the jar. High protein, zero fuss, delicious on a breezy cliff with sweaty hands. We pack snacks to share.
+              </p>
+            </div>
+          </div>
+
+          <!-- Interactive Packing Checklist -->
+          <div class="checklist-container">
+            <h4 class="checklist-title">
+              <span>CHECK YOUR PACK (TAP TO TICK)</span>
+            </h4>
+            <div class="check-item checked">
+              <div class="check-box">✓</div>
+              <span class="text">Shoes with grip (loose gravel & sandstone)</span>
+            </div>
+            <div class="check-item checked">
+              <div class="check-box">✓</div>
+              <span class="text">1 Litre water bottle (strictly reusable)</span>
+            </div>
+            <div class="check-item checked">
+              <div class="check-box">✓</div>
+              <span class="text">Cap or bandana for morning sunshine</span>
+            </div>
+            <div class="check-item">
+              <div class="check-box"></div>
+              <span class="text">Small shoulder bag or pouch for snacks</span>
+            </div>
+            <div class="check-item">
+              <div class="check-box"></div>
+              <span class="text">Open mind & zero Sunday morning ego</span>
+            </div>
+          </div>
+
+          <!-- Quick Reserve Button -->
+          <button class="btn-editorial btn-editorial-primary btn-view-mission" data-mission-id="001" style="width: 100%; margin-top: 1rem;">
+            CLAIM KHOJ TRAIL DAY SPOT (6 LEFT)
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         6. YOU MIGHT FIND... (LARGE EDITORIAL TYPOGRAPHY)
+         ======================================================================= -->
+    <section class="you-might-find-section">
+      <div class="page-container">
+        <p class="ymf-header">"You might find..."</p>
+
+        <!-- Hover Reveal List -->
+        <div class="ymf-list">
+          <div class="ymf-item" data-key="trail">
+            <span class="ymf-text">A TRAIL.</span>
+          </div>
+
+          <div class="ymf-item" data-key="lake">
+            <span class="ymf-text">A LAKE.</span>
+          </div>
+
+          <div class="ymf-item" data-key="viewpoint">
+            <span class="ymf-text">A RIDICULOUS VIEWPOINT.</span>
+          </div>
+
+          <div class="ymf-item" data-key="friend">
+            <span class="ymf-text">A NEW FRIEND.</span>
+          </div>
+
+          <div class="ymf-item" data-key="story">
+            <span class="ymf-text">A BETTER STORY.</span>
+          </div>
+
+          <div class="ymf-item" data-key="nothing">
+            <span class="ymf-text" style="color: var(--c-terracotta);">OR ABSOLUTELY NOTHING.</span>
+          </div>
+        </div>
+
+        <div class="ymf-footer-punchline">
+          <span class="arrow">↗</span>
+          <span>"That's kind of the point."</span>
+        </div>
+      </div>
+
+      <!-- Floating Dynamic Polaroid Cursor Card -->
+      <div id="ymfPreview" class="ymf-preview-card">
+        <img id="ymfPreviewImg" class="ymf-preview-img" src="assets/images/khoj_winding_road.jpg" alt="Preview preview">
+        <p id="ymfPreviewCaption" class="ymf-preview-caption">Overlooking the valley.</p>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         7. COMMUNITY ("STRANGERS TODAY. STORIES TOMORROW.")
+         ======================================================================= -->
+    <section class="community-section" id="community">
+      <div class="page-container">
+        <div class="community-header-grid">
+          <div>
+            <span class="section-tag">PEOPLE & CULTURE</span>
+            <h2 class="community-title">
+              STRANGERS TODAY.<br>
+              <span class="highlight">STORIES TOMORROW.</span>
+            </h2>
+          </div>
+
+          <div>
+            <p class="community-lead-copy">
+              You don't need to know anyone before you come.<br>
+              Most people show up alone.<br>
+              Most people leave knowing someone new.
+            </p>
+            <button class="btn-editorial btn-editorial-dark btn-community-trigger">
+              COME SAY HI →
+            </button>
+          </div>
+        </div>
+
+        <!-- Real Candid Photo Collage -->
+        <div class="collage-grid">
+          <!-- PHOTO 1: Frisbee -->
+          <div class="collage-item collage-item-1">
+            <div class="collage-img-wrap">
+              <img src="assets/images/morning_frisbee.jpg" alt="Young Indian community playing frisbee in morning sun">
+            </div>
+            <p class="collage-caption">
+              "The frisbee disc went into the thorny bushes four times. Nobody cared."
+            </p>
+          </div>
+
+          <!-- PHOTO 2: Winding Road Cliff (User upload) -->
+          <div class="collage-item collage-item-2">
+            <div class="collage-img-wrap portrait">
+              <img src="assets/images/khoj_winding_road.jpg" alt="Overlooking winding road in Aravalli hills">
+            </div>
+            <p class="collage-caption">
+              "Quiet spot perched on the edge. Roasted chana hits different up here."
+            </p>
+          </div>
+
+          <!-- PHOTO 3: Cycling Dawn -->
+          <div class="collage-item collage-item-3">
+            <div class="collage-img-wrap">
+              <img src="assets/images/cycling_dawn.jpg" alt="Friends cycling on misty morning rural road">
+            </div>
+            <p class="collage-caption">
+              "5:45 AM rollout. Gurgaon before the car horns take over."
+            </p>
+          </div>
+
+          <!-- PHOTO 4: Kulhad Chai -->
+          <div class="collage-item collage-item-4">
+            <div class="collage-img-wrap">
+              <img src="assets/images/chai_community_circle.jpg" alt="Sitting on rocks drinking kulhad chai">
+            </div>
+            <p class="collage-caption">
+              "Dirty shoes, clay cups, and stories that wouldn't happen in a café."
+            </p>
+          </div>
+
+          <!-- PHOTO 5: Lake sunset (User upload) -->
+          <div class="collage-item collage-item-5">
+            <div class="collage-img-wrap">
+              <img src="assets/images/lake_sunset_meditation.jpg" alt="Calm evening lake in the ridge">
+            </div>
+            <p class="collage-caption">
+              "Sitting in complete silence by the hidden lake. Just water and breath."
+            </p>
+          </div>
+        </div>
+
+        <!-- Community Field Notes / Actual Voices -->
+        <div class="quotes-grid">
+          <div class="field-note-card">
+            <p class="field-note-quote">
+              "I took a cab alone from Saket at 5:00 AM wondering what possessed me to do this. By 7:30 AM I was diving for a frisbee in mud with an architect, an engineer and a freelance writer. Best Sunday in months."
+            </p>
+            <p class="field-note-author">— AARAV M. · FIRST TIMER (NOW REGULAR)</p>
+          </div>
+
+          <div class="field-note-card">
+            <p class="field-note-quote">
+              "No networking. No 'so what company are you with?'. Just pure childhood freedom and walking on rocks. It's the only thing keeping my mental health sane in Gurgaon."
+            </p>
+            <p class="field-note-author">— DIYA K. · PRODUCT DESIGNER</p>
+          </div>
+
+          <div class="field-note-card">
+            <p class="field-note-quote">
+              "The 15 minutes of silent meditation sitting on the sandstone after a 6km scramble was louder than any meditation app. You actually remember that you have a body."
+            </p>
+            <p class="field-note-author">— KABIR T. · GURGAON</p>
+          </div>
+        </div>
+
+        <!-- Founder Note & Instagram Reel Showcase Banner -->
+        <div class="founder-reel-card">
+          <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: 1rem;">
+            <div style="display: flex; align-items: center; gap: 0.65rem;">
+              <span class="intro-badge" style="margin-bottom: 0;">HOST & FOUNDER</span>
+              <span class="font-mono" style="font-size: 0.85rem; color: var(--c-terracotta); font-weight: 700;">SANDEEP BHAMOO (BHAMOO G)</span>
+            </div>
+            <a href="https://www.instagram.com/nothingmatters.in/" target="_blank" rel="noopener" class="hero-pill" style="color: var(--c-forest); border-color: var(--c-forest); text-decoration: none;">
+              📸 @nothingmatters.in ↗
+            </a>
+          </div>
+
+          <h3 class="font-display" style="font-size: clamp(2rem, 5vw, 3.4rem); line-height: 0.95; color: var(--c-forest); margin-bottom: 1rem;">
+            "LESS SCROLLING. MORE EXPLORING."
+          </h3>
+
+          <p style="font-size: 1.1rem; line-height: 1.55; color: var(--c-dark-olive); margin-bottom: 1.75rem; max-width: 820px;">
+            "I started <strong>nothingmatters.in</strong> because I couldn't stand watching friends spend another weekend trapped indoors in Gurgaon, scrolling reels in bed or repeating the same café routines. You don't need fancy trekking gear or an athletic background. Just put on your shoes, show up at dawn, meet good people, and breathe."
+          </p>
+
+          <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+            <a href="https://www.instagram.com/reel/DbX6dPpvpT6/?stkn=MW5tbmhuaWppNThtdg==" target="_blank" rel="noopener" class="btn-editorial btn-editorial-primary" style="font-size: 1.05rem; padding: 0.75rem 1.4rem;">
+              <span>▶ WATCH SUNDAY FIELD REEL</span>
+            </a>
+            <a href="https://www.instagram.com/channel/AbZQsRW__jzIcjet/" target="_blank" rel="noopener" class="btn-editorial btn-editorial-secondary" style="font-size: 1.05rem; padding: 0.75rem 1.4rem;">
+              <span>⚡ JOIN INSTAGRAM CHANNEL</span>
+            </a>
+            <span class="font-hand" style="font-size: 1.6rem; color: var(--c-terracotta); margin-left: 0.5rem;">
+              — Bhamoo G ✍️
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         8. NOTHINGMATTER RULES (6 PLAYFUL RULES)
+         ======================================================================= -->
+    <section class="rules-section" id="rules">
+      <div class="page-container">
+        <div class="section-header-editorial">
+          <span class="section-tag">FIELD PROTOCOL</span>
+          <h2 class="display-title">NOTHINGMATTER RULES.</h2>
+          <p style="font-size: 1.15rem; color: var(--c-ink-muted);">
+            Simple agreements that make every weekend magical, safe and completely unpretentious.
+          </p>
+        </div>
+
+        <div class="rules-grid">
+          <!-- RULE 01 -->
+          <div class="rule-card">
+            <div class="rule-number">
+              <span>01</span>
+              <span class="rule-stamp-mini">NON-NEGOTIABLE</span>
+            </div>
+            <h3 class="rule-title">DON'T OVERTHINK IT.</h3>
+            <p class="rule-explanation">
+              The snooze button is a trap. Your mind will try to convince you to stay in bed. Just put your feet on the floor and lace up your sneakers.
+            </p>
+            <p class="rule-annotation">"Future you will thank you at 7:00 AM."</p>
+          </div>
+
+          <!-- RULE 02 -->
+          <div class="rule-card">
+            <div class="rule-number">
+              <span>02</span>
+              <span class="rule-stamp-mini">MINDSET</span>
+            </div>
+            <h3 class="rule-title">COME CURIOUS.</h3>
+            <p class="rule-explanation">
+              Ask questions. Notice the yellow amaltas flowers, the thorny acacia bark, the babbler birds. Look at things you normally rush past in traffic.
+            </p>
+            <p class="rule-annotation">"Leave your expert badge at home."</p>
+          </div>
+
+          <!-- RULE 03 -->
+          <div class="rule-card">
+            <div class="rule-number">
+              <span>03</span>
+              <span class="rule-stamp-mini">SOCIAL</span>
+            </div>
+            <h3 class="rule-title">TALK TO PEOPLE.</h3>
+            <p class="rule-explanation">
+              Introverts are deeply welcomed here. Nobody is here to pitch you a startup or judge your outfit. Say hello to whoever is walking next to you.
+            </p>
+            <p class="rule-annotation">"Strangers are just friends you haven't hiked with."</p>
+          </div>
+
+          <!-- RULE 04 -->
+          <div class="rule-card">
+            <div class="rule-number">
+              <span>04</span>
+              <span class="rule-stamp-mini">DIGITAL DETOX</span>
+            </div>
+            <h3 class="rule-title">PHONES DOWN SOMETIMES.</h3>
+            <p class="rule-explanation">
+              Take one photo if you must, then pocket it. If you spend the sunrise staging reels, you missed the entire point of waking up at dawn.
+            </p>
+            <p class="rule-annotation">"Eyes have better resolution than OLED screens."</p>
+          </div>
+
+          <!-- RULE 05 -->
+          <div class="rule-card">
+            <div class="rule-number">
+              <span>05</span>
+              <span class="rule-stamp-mini">ETHICS</span>
+            </div>
+            <h3 class="rule-title">LEAVE THE PLACE BETTER THAN YOU FOUND IT.</h3>
+            <p class="rule-explanation">
+              Pack out your trash. Pick up a plastic bottle left behind by someone else. Treat the ancient Aravalli ridges like sacred living soil.
+            </p>
+            <p class="rule-annotation">"Zero trace. Maximum respect."</p>
+          </div>
+
+          <!-- RULE 06 -->
+          <div class="rule-card">
+            <div class="rule-number">
+              <span>06</span>
+              <span class="rule-stamp-mini">CORE VIBE</span>
+            </div>
+            <h3 class="rule-title">HAVE FUN.</h3>
+            <p class="rule-explanation">
+              This isn't an Olympic trial or an endurance test. If you want to sit down on a rock and eat a banana while others run, sit down on the rock.
+            </p>
+            <p class="rule-annotation">"Nothing matters. Seriously."</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         9. FINAL CTA ("YOUR WEEKEND IS WAITING.")
+         ======================================================================= -->
+    <section class="final-cta-section">
+      <div class="page-container">
+        <h2 class="cta-huge-title">
+          YOUR WEEKEND<br>IS WAITING.
+        </h2>
+
+        <p class="cta-sub-copy">
+          Stop scrolling.<br>
+          Put on your shoes.<br>
+          Come outside.
+        </p>
+
+        <div class="cta-action-wrapper">
+          <a href="#missions" class="btn-editorial btn-editorial-primary" style="font-size: 1.6rem; padding: 1.15rem 2.8rem;">
+            EXPLORE NEXT MISSION
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          </a>
+
+          <p class="cta-handwritten-note">
+            "See you on Sunday at sunrise ↗"
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =======================================================================
+       10. FOOTER
+       ======================================================================= -->
+  <footer class="site-footer">
+    <div class="page-container">
+      <div class="footer-main-grid">
+        <!-- Col 1: Brand & Manifesto -->
+        <div>
+          <a href="#" class="footer-brand">
+            nothingmatter<span class="dot">.</span>
+          </a>
+          <p class="footer-philosophy">"Walk. Feel. Explore. Connect."</p>
+          <p class="footer-manifesto-sub">
+            An underground outdoor exploration movement for the restless souls of Gurgaon & the Aravallis. Escaping screens since 2024.
+          </p>
+        </div>
+
+        <!-- Col 2: Navigation -->
+        <div>
+          <h5 class="footer-col-title">EXPLORE</h5>
+          <ul class="footer-link-list">
+            <li><a href="#philosophy" class="footer-link">Manifesto</a></li>
+            <li><a href="#categories" class="footer-link">Categories</a></li>
+            <li><a href="#missions" class="footer-link">Next Missions</a></li>
+            <li><a href="#featured-khoj" class="footer-link">KHOJ Trail Day</a></li>
+            <li><a href="#rules" class="footer-link">The 6 Rules</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Coordinates & Trails -->
+        <div>
+          <h5 class="footer-col-title">TERRAIN</h5>
+          <ul class="footer-link-list">
+            <li><span class="footer-link">Leopard Trail Ridge</span></li>
+            <li><span class="footer-link">Vatika Chowk Scrub</span></li>
+            <li><span class="footer-link">Aravalli Biodiversity Trails</span></li>
+            <li><span class="footer-link">Mangar Bani Sacred Grove</span></li>
+            <li><span class="footer-link">Gwal Pahari Secret Quarry</span></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Dispatch & Social -->
+        <div>
+          <h5 class="footer-col-title">CONNECT</h5>
+          <ul class="footer-link-list">
+            <li>
+              <a href="https://www.instagram.com/nothingmatters.in/" target="_blank" rel="noopener" class="footer-link">
+                <span>📸</span> @nothingmatters.in
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/channel/AbZQsRW__jzIcjet/" target="_blank" rel="noopener" class="footer-link">
+                <span>⚡</span> Instagram Channel
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/reel/DbX6dPpvpT6/?stkn=MW5tbmhuaWppNThtdg==" target="_blank" rel="noopener" class="footer-link">
+                <span>▶</span> Sunday Morning Reel
+              </a>
+            </li>
+            <li>
+              <a href="#community" class="footer-link btn-community-trigger">
+                <span>💬</span> WhatsApp Broadcast Group
+              </a>
+            </li>
+            <li>
+              <a href="mailto:hello@nothingmatters.in" class="footer-link">
+                <span>✉️</span> Field Dispatch Email
+              </a>
+            </li>
+          </ul>
+          <div style="margin-top: 1.25rem;">
+            <span class="hero-pill" style="font-size: 0.68rem; padding: 0.25rem 0.6rem;">
+              GPS: 28.4595° N, 77.0266° E · GURGAON
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <div>
+          © 2024–2026 nothingmatter. Founded by Sandeep Bhamoo (Bhamoo G) in Gurgaon.
+        </div>
+        <div style="display: flex; gap: 1.5rem;">
+          <span>"Less scrolling. More exploring."</span>
+          <span>Gurgaon, India</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =======================================================================
+       INTERACTIVE MODAL: MISSION DOSSIER & RSVP FLOW
+       ======================================================================= -->
+  <div id="missionModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modalMissionTitle">
+    <div class="modal-sheet">
+      <button id="modalCloseBtn" class="modal-close-btn" aria-label="Close modal">×</button>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+        <span id="modalMissionCode" class="intro-badge" style="margin-bottom: 0;">MISSION 001</span>
+        <span id="modalSpotsBadge" class="hero-pill" style="background-color: var(--c-terracotta); color: #FFF; border: none;">6 SPOTS LEFT</span>
+      </div>
+
+      <h3 id="modalMissionTitle" class="display-subtitle" style="color: var(--c-forest); margin-bottom: 0.35rem;">KHOJ — TRAIL DAY</h3>
+      <p id="modalMissionMeta" class="font-mono" style="font-size: 0.82rem; color: var(--c-terracotta); margin-bottom: 1.25rem;">Sunday · 5:30 AM · Vatika Chowk, Gurgaon</p>
+
+      <div style="background-color: var(--bg-ivory); border: 1.5px dashed var(--c-sand); padding: 1rem 1.25rem; margin-bottom: 1.5rem;">
+        <p style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--c-muted-olive); text-transform: uppercase;">TRAIL VIBE & TERRAIN</p>
+        <p id="modalVibe" style="font-size: 0.95rem; color: var(--c-ink); margin-top: 0.25rem; font-weight: 500;">
+          Quiet morning exploration, pickup frisbee, warm rock silence, post-hike chai.
+        </p>
+        <p id="modalDifficulty" class="font-mono" style="font-size: 0.78rem; color: var(--c-forest); margin-top: 0.5rem;">
+          Moderate (6.2 km loop with loose gravel & hill scramble)
+        </p>
+        <p id="modalCoords" class="font-mono" style="font-size: 0.72rem; color: var(--c-terracotta); margin-top: 0.25rem;">
+          28.4089° N, 77.0620° E
+        </p>
+      </div>
+
+      <div style="margin-bottom: 1.5rem;">
+        <h4 class="font-display" style="font-size: 1.35rem; color: var(--c-forest); margin-bottom: 0.65rem;">ITINERARY BRIEFING</h4>
+        <ul id="modalTimelineList" style="list-style: none; font-size: 0.92rem; color: var(--c-ink);"></ul>
+        <p class="font-mono" style="font-size: 0.76rem; color: var(--c-terracotta); margin-top: 0.65rem; background: rgba(194, 77, 44, 0.08); padding: 0.5rem 0.75rem; border-left: 2px solid var(--c-terracotta); display: flex; align-items: flex-start; gap: 0.4rem;">
+          <span>⚠️</span> <span>Schedule can change with days & sunrise times. Connect on our WhatsApp group for latest updates & exact pin location.</span>
+        </p>
+      </div>
+
+      <div style="margin-bottom: 2rem;">
+        <h4 class="font-display" style="font-size: 1.35rem; color: var(--c-forest); margin-bottom: 0.65rem;">MANDATORY GEAR</h4>
+        <ul id="modalGearList" style="list-style: none; font-size: 0.9rem; color: var(--c-ink-muted);"></ul>
+      </div>
+
+      <!-- RSVP Form -->
+      <div style="border-top: 2px solid var(--c-forest); padding-top: 1.5rem;">
+        <h4 class="font-display" style="font-size: 1.6rem; color: var(--c-forest); margin-bottom: 0.25rem;">RESERVE YOUR SPOT</h4>
+        <p style="font-size: 0.88rem; color: var(--c-ink-muted);">Community shared costs only (snacks + first aid kit). No commercial markups.</p>
+
+        <form id="missionRsvpForm" class="editorial-form">
+          <div class="form-group">
+            <label for="rsvpName" class="form-label">Your Name</label>
+            <input type="text" id="rsvpName" class="form-input" placeholder="e.g. Kabir Mehra" required>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="form-group">
+              <label for="rsvpPhone" class="form-label">WhatsApp Number</label>
+              <input type="tel" id="rsvpPhone" class="form-input" placeholder="+91 98765 43210" required>
+            </div>
+            <div class="form-group">
+              <label for="rsvpCount" class="form-label">Spots</label>
+              <select id="rsvpCount" class="form-input">
+                <option value="1">1 Person (Solo Explorer)</option>
+                <option value="2">2 People (Me + a friend)</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-editorial btn-editorial-primary" style="width: 100%; margin-top: 0.5rem;">
+            CONFIRM RSVP VIA WHATSAPP →
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- =======================================================================
+       INTERACTIVE MODAL: COMMUNITY WHATSAPP JOIN
+       ======================================================================= -->
+  <div id="communityModal" class="modal-backdrop" role="dialog" aria-modal="true">
+    <div class="modal-sheet" style="max-width: 520px; text-align: center;">
+      <button id="commModalCloseBtn" class="modal-close-btn" aria-label="Close modal">×</button>
+
+      <span class="intro-badge">PRIVATE COMMUNITY</span>
+      <h3 class="display-subtitle" style="color: var(--c-forest); margin-top: 0.5rem; margin-bottom: 0.5rem;">
+        COME SAY HI.
+      </h3>
+      <p style="font-size: 1.05rem; color: var(--c-ink-muted); margin-bottom: 1.5rem;">
+        We organize everything through a quiet WhatsApp broadcast. No spam, no forwards. Just weekend mission locations and trail drops on Wednesday evenings.
+      </p>
+
+      <div style="background-color: var(--bg-ivory); padding: 1.25rem; border: 1.5px dashed var(--c-muted-olive); margin-bottom: 1.5rem; text-align: left;">
+        <p class="font-mono" style="font-size: 0.75rem; color: var(--c-dark-olive); margin-bottom: 0.35rem;">WHAT HAPPENS AFTER YOU JOIN:</p>
+        <p style="font-size: 0.9rem; color: var(--c-ink);">
+          1. You receive the weekend drop every Wednesday at 7 PM.<br>
+          2. You RSVP if you're free, skip if you're busy.<br>
+          3. You meet 15–20 solid humans on Sunday morning.
+        </p>
+      </div>
+
+      <form id="communityJoinForm" class="editorial-form">
+        <div class="form-group" style="text-align: left;">
+          <label for="commInput" class="form-label">Enter your WhatsApp Number or Email</label>
+          <input type="text" id="commInput" class="form-input" placeholder="+91 98765 43210 or your@email.com" required>
+        </div>
+
+        <button type="submit" class="btn-editorial btn-editorial-primary" style="width: 100%;">
+          JOIN THE BROADCAST
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- =======================================================================
+       INTERACTIVE MODAL: LIGHTBOX
+       ======================================================================= -->
+  <div id="lightboxModal" class="modal-backdrop" role="dialog" aria-modal="true">
+    <div class="modal-sheet" style="max-width: 820px; padding: 1.5rem; background: var(--bg-ivory);">
+      <button id="lightboxClose" class="modal-close-btn">×</button>
+      <div style="max-height: 70vh; overflow: hidden; background: #000; display: flex; align-items: center; justify-content: center;">
+        <img id="lightboxImg" src="" alt="Enlarged field photograph" style="max-width: 100%; max-height: 70vh; object-fit: contain;">
+      </div>
+      <p id="lightboxCaption" class="font-hand" style="font-size: 1.8rem; color: var(--c-dark-olive); margin-top: 1rem; text-align: center;"></p>
+    </div>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

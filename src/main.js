@@ -499,17 +499,6 @@ function initCommunityModal() {
     if (e.target === modal) close();
   });
 
-  const form = document.getElementById("communityJoinForm");
-  if (form) {
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const val = document.getElementById("commInput").value.trim();
-      if (!val) return;
-      showToast("Welcome to nothingmatter.! Invite link sent to your number.");
-      close();
-      form.reset();
-    });
-  }
 }
 
 // -------------------------------------------------------------

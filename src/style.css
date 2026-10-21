@@ -521,6 +521,19 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
 }
 
+.mobile-drawer-back {
+  align-self: flex-start;
+  margin-bottom: 1.5rem;
+  padding: 0.45rem 0.7rem;
+  background: transparent;
+  border: 1px solid var(--c-forest);
+  color: var(--c-forest);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+}
+
 .mobile-nav-links {
   list-style: none;
   display: flex;

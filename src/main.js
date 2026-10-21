@@ -452,9 +452,16 @@ function initInteractiveChecklist() {
 function initMobileMenu() {
   const menuBtn = document.getElementById("mobileMenuBtn");
   const drawer = document.getElementById("mobileDrawer");
+  const backBtn = document.getElementById("mobileDrawerBackBtn");
   const links = document.querySelectorAll(".mobile-nav-link");
 
   if (!menuBtn || !drawer) return;
+
+  function closeMenu() {
+    menuBtn.classList.remove("active");
+    drawer.classList.remove("open");
+    document.body.style.overflow = "";
+  }
 
   menuBtn.addEventListener("click", () => {
     menuBtn.classList.toggle("active");
@@ -464,12 +471,10 @@ function initMobileMenu() {
       : "";
   });
 
+  if (backBtn) backBtn.addEventListener("click", closeMenu);
+
   links.forEach((l) => {
-    l.addEventListener("click", () => {
-      menuBtn.classList.remove("active");
-      drawer.classList.remove("open");
-      document.body.style.overflow = "";
-    });
+    l.addEventListener("click", closeMenu);
   });
 }
 

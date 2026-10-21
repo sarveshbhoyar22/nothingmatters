@@ -343,7 +343,7 @@ function initMissionModal() {
       // Show instant confirmation
       showToast(`Spot reserved for ${name}! Opening WhatsApp...`);
       setTimeout(() => {
-        window.open(`https://wa.me/919999999999?text=${waMsg}`, "_blank");
+        window.open(`https://wa.me/916377893661?text=${waMsg}`, "_blank");
         closeModal();
         rsvpForm.reset();
       }, 700);
